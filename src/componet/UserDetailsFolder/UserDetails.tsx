@@ -74,6 +74,9 @@ const UserDetails: React.FC<UserDetailsProps> = (props) => {
     }
   };
 
+  const displayName:string = inputValue.substring(0, inputValue.indexOf(' ')); 
+
+
   return (
     <>
       {step === 1 ? (
@@ -99,7 +102,7 @@ const UserDetails: React.FC<UserDetailsProps> = (props) => {
                 <Form.Input
                   label="Display Name"
                   placeholder="Display Name"
-                  value={inputValue}
+                  value={displayName}
                   readOnly={true}
                 />
               </Form.Field>

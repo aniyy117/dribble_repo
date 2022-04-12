@@ -6,9 +6,13 @@ import FinalPage from "./componet/FinalPageFolder/FinalPage";
 import logo from "./Image/logo.png";
 import { useState } from "react";
 
-export default function App() {
+
+interface AppProps {}
+
+const App:React.FC<AppProps> =(props) => {
+
   const [steps, setSteps] = useState<number>(1);
-  const [userName, setUserName] = useState<string>("steve jobs");
+  const [userName, setUserName] = useState<string>("Steve jobs");
   const [workSpaceName, setWorkSpaceName] = useState<string>("Eden");
   const [webSiteValue, setWebSiteValue] = useState<string>("www.google.com");
   const [selectedCard, setsSelectedCard] = useState<string>("1");
@@ -16,6 +20,8 @@ export default function App() {
   const handleNextButton = () => {
     if (steps < 4) setSteps(steps + 1);
   };
+
+  const displayName:string = userName.substring(0, userName.indexOf(' ')); 
 
   const handleFormData = (type: string, value: string) => {
     if (type === "userName") {
@@ -54,7 +60,7 @@ export default function App() {
       case 3:
         return <CardForm handleNextButton={handleNextButton} selectedCard={selectedCard}  handleFormData={handleFormData}/>;
       case 4:
-        return <FinalPage />;
+        return <FinalPage displayName={displayName}/>;
       default:
         return "";
     }
@@ -63,6 +69,8 @@ export default function App() {
   const handleChildSteps = (steps: string) => {
     setSteps(Number(steps));
   };
+
+
 
   return (
     <div className="App">
@@ -76,3 +84,5 @@ export default function App() {
     </div>
   );
 }
+
+export default App
