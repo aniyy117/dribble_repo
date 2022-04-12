@@ -11,7 +11,8 @@ const Stepper: React.FC<StepperProps> = (props) => {
   const { handleChildSteps, step } = props;
 
   const handleClick = (id: string) => {
-    if (step > Number(id)) handleChildSteps(id);
+    // if (step > Number(id)) 
+    handleChildSteps(id);
   };
 
   return (

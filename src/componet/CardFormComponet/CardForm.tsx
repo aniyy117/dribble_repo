@@ -53,7 +53,7 @@ const CardForm = (props: CardFormProps) => {
                           }
                         >
                           <Card.Content>
-                            <Icon name={cardinfo.iconName} />
+                            <Icon name={cardinfo.iconName} className={"card_icon"}/>
                             <h4>{cardinfo.h3info}</h4>
                             <p>{cardinfo.pinfo}</p>
                           </Card.Content>

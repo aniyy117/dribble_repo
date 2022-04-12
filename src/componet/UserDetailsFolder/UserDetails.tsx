@@ -75,7 +75,7 @@ const UserDetails: React.FC<UserDetailsProps> = (props) => {
         </div>
       ) : (
         //condition
-        <div className="user_details">
+        <div className="workshop_details">
           <div className="user_details_header">
             <h1>{"Let's set up a home for all your work"}</h1>
             <p>{"You can always create another workspace later"}</p>

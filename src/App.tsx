@@ -39,7 +39,7 @@ export default function App() {
       <div className="stepper_div">
         <Stepper handleChildSteps={handleChildSteps} step={steps} />
       </div>
-      <div>{handleForm(steps)}</div>
+      <div className="form_body">{handleForm(steps)}</div>
     </div>
   );
 }

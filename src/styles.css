@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap");
 .App {
-  margin: 2em 2rem;
+  padding: 4rem 2rem;
   font-family: "Inter", sans-serif;
 }
 .logo_container {
@@ -16,13 +16,37 @@
   padding: 0 10rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 1080px) {
+  .App {
+    padding: 4rem 1rem;
+    font-family: "Inter", sans-serif;
+  }
   .stepper_div {
     padding: 0 1rem;
   }
 
   h1 {
-    font-size: 1.7rem;
+    font-size: 3rem !important;
+    text-align: center;
+  }
+  p {
+    font-size: 1.5rem;
+    word-wrap: break-word;
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .App {
+    padding: 10rem 2rem;
+    font-family: "Inter", sans-serif;
+  }
+  .stepper_div {
+    padding: 0 1rem;
+  }
+
+  h1 {
+    font-size: 1.7rem !important;
     text-align: center;
   }
   p {
@@ -30,3 +54,23 @@
     word-wrap: break-word;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .App {
+    padding: 4rem 1rem;
+    font-family: "Inter", sans-serif;
+  }
+  .stepper_div {
+    padding: 0 1rem;
+  }
+
+  h1 {
+    font-size: 1.7rem !important;
+    text-align: center;
+  }
+  p {
+    font-size: 0.8rem;
+    word-wrap: break-word;
+  }
+}
+
