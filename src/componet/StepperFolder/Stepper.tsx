@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./stepper.css";
 import { stepformData } from "./utils/utils";
 
@@ -11,8 +11,7 @@ const Stepper: React.FC<StepperProps> = (props) => {
   const { handleChildSteps, step } = props;
 
   const handleClick = (id: string) => {
-    // if (step > Number(id)) 
-    handleChildSteps(id);
+    if (step > Number(id)) handleChildSteps(id);
   };
 
   return (

@@ -1,18 +1,41 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button, Form, Input } from "semantic-ui-react";
 import "./UserDetails.css";
+
+
 interface UserDetailsProps {
   handleNextButton: any;
   step: number;
+  userName?: string;
+  workSpaceName?:string;
+  webSiteValues?:string;
+  handleFormData?:any
 }
 
 const UserDetails: React.FC<UserDetailsProps> = (props) => {
-  const { handleNextButton, step } = props;
+  
+  const { handleNextButton, step , userName , handleFormData , workSpaceName ,webSiteValues} = props;
+
   const [inputValue, setInputValue] = React.useState<string>("");
+
   const [workSpaceValue, SetWorkSpaceValue] = React.useState<string>("");
   const [webSiteValue, setWebsiteValue] = React.useState<string>("");
+
   const [workValidation, setWorkValidation] = React.useState<boolean>(false);
   const [nameValidation, setNameValidation] = React.useState<boolean>(false);
+  
+
+  useEffect( () => {
+    if(step === 1){
+      setInputValue(userName ? userName : "");
+    }
+    else if(step === 2){
+      SetWorkSpaceValue(workSpaceName ? workSpaceName:"");
+      setWebsiteValue(webSiteValues ? webSiteValues:"");
+    }
+  },[userName ,workSpaceName ,webSiteValues] );
+
+  
   const handleInputValue = (
     e: React.ChangeEvent<HTMLInputElement>,
     inputType: string
@@ -20,21 +43,34 @@ const UserDetails: React.FC<UserDetailsProps> = (props) => {
     if (inputType === "userFrom") {
       setInputValue(e.target.value);
       setNameValidation(false);
-    } else if (inputType === "workSpace") {
+      
+    } 
+    else if (inputType === "workSpace") {
       SetWorkSpaceValue(e.target.value);
       setWorkValidation(false);
-    } else {
+      
+    } 
+    else {
       setWebsiteValue(e.target.value);
     }
   };
 
+  //for handling validation and next button
+  
   const handleButtonCLick = (formType: string) => {
     if (formType === "userFrom") {
       if (inputValue === "") setNameValidation(true);
-      else handleNextButton();
-    } else if (formType === "workSpace") {
+      else {
+        handleNextButton();
+        handleFormData("userName",inputValue);}
+    }
+     else if (formType === "workSpace") {
       if (workSpaceValue === "") setWorkValidation(true);
-      else handleNextButton();
+      else{ 
+        handleNextButton();
+        handleFormData("workSpaceName",workSpaceValue);
+        handleFormData("webSiteValue",webSiteValue);
+      }
     }
   };
 
@@ -68,7 +104,7 @@ const UserDetails: React.FC<UserDetailsProps> = (props) => {
                 />
               </Form.Field>
               <Button type="submit" className="user_details_button">
-                Create Workspace
+                {"Create Workspace"}
               </Button>
             </Form>
           </div>
