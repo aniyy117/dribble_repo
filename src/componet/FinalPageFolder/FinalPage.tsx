@@ -7,7 +7,7 @@ const FinalPage: React.FC<FinalPageProps> = (props) => {
   return (
     <div className="final_details">
       <div className="final_check">
-        <Icon name="check" className="final_icon" />
+        <Icon name="check" className="final_icon card_icon" />
       </div>
       <div className="user_details_header">
         <h1>Congratulations, Eren!</h1>
@@ -15,7 +15,7 @@ const FinalPage: React.FC<FinalPageProps> = (props) => {
       </div>
       <div className="user_details_form_container">
         <Button type="submit" className="user_details_button">
-          Create Workspace
+          {"Launch Eden"}
         </Button>
       </div>
     </div>

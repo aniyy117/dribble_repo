@@ -1,3 +1,31 @@
+.user_details {
+  animation: fadein ease 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadein {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.workshop_details{
+  animation: fadeins ease 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeins {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+
+
 .user_details_header {
   display: flex;
   justify-content: center;
@@ -5,6 +33,7 @@
   align-items: center;
   padding: 1rem 0rem;
 }
+
 
 .user_details_form_container {
   padding: 2rem 30rem;
@@ -16,8 +45,26 @@
   color: #ffff !important;
 }
 
-@media only screen and (max-width: 600px) {
+
+
+@media screen and (max-width: 1080px) {
   .user_details_form_container {
-    padding: 0 2rem;
+    padding: 3rem 40rem;
   }
 }
+
+@media screen and (max-width: 992px) {
+  .user_details_form_container {
+    padding: 2rem 10rem;
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .user_details_form_container {
+    padding: 2rem 2rem;
+  }
+}
+
+

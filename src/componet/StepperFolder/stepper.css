@@ -62,7 +62,7 @@
 .stepper-item.completed::after {
   position: absolute;
   content: "";
-  border-bottom: 3px solid#6C6AE5;
+  border-bottom: 3px solid #6C6AE5;
   /* width: 100%; */
   top: 20px;
   left: 50%;

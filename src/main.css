@@ -1,10 +1,12 @@
+
+
 .ui.form .field .ui.input input,
 .ui.form .fields .field .ui.input input {
   width: 10px;
 }
 
 .ui.card.card_border.active {
-  border: 2px solid #5a4ad1;
+  border: 1px solid #5a4ad1;
   color: #40434a;
   box-shadow: 0 4px 8px 0 #b3aee3, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -16,4 +18,8 @@
 
 .ui.card.card_border:hover {
   box-shadow: 0 4px 8px 0 #b3aee3, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card_icon{
+  font-size:1.4rem !important;
 }
