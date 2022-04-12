@@ -6,7 +6,7 @@ interface CardFormProps {
   handleNextButton: any;
 }
 
-const CardForm: React.FC<CardFormProps> = (props) => {
+const CardForm = (props: CardFormProps) => {
   const { handleNextButton } = props;
   const [card, setCard] = React.useState<string>();
 
@@ -44,20 +44,21 @@ const CardForm: React.FC<CardFormProps> = (props) => {
                 cardData.map((cardinfo: any) => {
                   return (
                     <Grid.Column key={cardinfo.id}>
-                      <Card
-                        className={
-                          card === cardinfo.id
-                            ? "card_border active"
-                            : "card_border"
-                        }
-                        onClick={() => handleCardLink(cardinfo.id)}
-                      >
-                        <Card.Content>
-                          <Icon name={cardinfo.iconName} />
-                          <h4>{cardinfo.h3info}</h4>
-                          <p>{cardinfo.pinfo}</p>
-                        </Card.Content>
-                      </Card>
+                      <div onClick={() => handleCardLink(cardinfo.id)}>
+                        <Card
+                          className={
+                            card === cardinfo.id
+                              ? "card_border active"
+                              : "card_border"
+                          }
+                        >
+                          <Card.Content>
+                            <Icon name={cardinfo.iconName} />
+                            <h4>{cardinfo.h3info}</h4>
+                            <p>{cardinfo.pinfo}</p>
+                          </Card.Content>
+                        </Card>
+                      </div>
                     </Grid.Column>
                   );
                 })}
