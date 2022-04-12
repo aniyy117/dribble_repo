@@ -9,6 +9,7 @@
   border: 1px solid #5a4ad1;
   color: #40434a;
   box-shadow: 0 4px 8px 0 #b3aee3, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.3s;
 }
 
 .ui.card.card_border {
@@ -20,6 +21,13 @@
   box-shadow: 0 4px 8px 0 #b3aee3, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+
 .card_icon{
   font-size:1.4rem !important;
+  color: #40434a;
+}
+
+.card_icon.active_icon {
+  font-size:1.4rem !important;
+  color: #5a4ad1;
 }

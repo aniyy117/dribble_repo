@@ -4,20 +4,23 @@ import "./CardForm.css";
 
 interface CardFormProps {
   handleNextButton: any;
+  selectedCard: string;
+  handleFormData: any;
 }
 
 const CardForm = (props: CardFormProps) => {
-  const { handleNextButton } = props;
-  const [card, setCard] = React.useState<string>();
+  const { handleNextButton ,selectedCard, handleFormData} = props;
+  const [card, setCard] = React.useState<string>(selectedCard);
 
   const handleButtonCLick = () => {
     handleNextButton();
+    handleFormData("selectedCard", card);
   };
 
   const cardData: any = [
     {
       id: "1",
-      iconName: "group",
+      iconName: "user",
       h3info: "For Myself",
       pinfo: "Write Better. Think More Clearly. Stay Oragnised"
     },
@@ -53,7 +56,7 @@ const CardForm = (props: CardFormProps) => {
                           }
                         >
                           <Card.Content>
-                            <Icon name={cardinfo.iconName} className={"card_icon"}/>
+                            <Icon name={cardinfo.iconName} className={card === cardinfo.id ?"card_icon active_icon":"card_icon"}/>
                             <h4>{cardinfo.h3info}</h4>
                             <p>{cardinfo.pinfo}</p>
                           </Card.Content>
