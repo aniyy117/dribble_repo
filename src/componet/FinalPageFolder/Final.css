@@ -1,0 +1,20 @@
+.final_icon {
+  font-size: 16px;
+  margin: 2rem 0;
+}
+
+.final_check {
+  height: 4rem;
+  width: 4rem;
+  margin: 2rem auto;
+  background-color: #5a4ad1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.final_details {
+  text-align: center;
+}

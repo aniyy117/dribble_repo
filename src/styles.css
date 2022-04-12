@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap");
+.App {
+  margin: 2em 2rem;
+  font-family: "Inter", sans-serif;
+}
+.logo_container {
+  display: flex;
+  justify-content: center;
+}
+
+.logo_image {
+  height: 4rem;
+}
+
+.stepper_div {
+  padding: 0 10rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .stepper_div {
+    padding: 0 1rem;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+  p {
+    font-size: 0.8rem;
+    word-wrap: break-word;
+  }
+}
