@@ -19,7 +19,7 @@ This repo contains Dribbble Ui challenge which give by [Eren](https://dribbble.c
 
 # Install
 
-Default branch is `master`. Checkout to the latest branch if `master` is not upto date.
+Default branch is `main`. Checkout to the latest branch if `main` is not upto date.
 
 ```sh
 git checkout <branch-name>
