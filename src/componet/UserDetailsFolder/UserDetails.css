@@ -47,9 +47,9 @@
 
 
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1800px) {
   .user_details_form_container {
-    padding: 3rem 40rem;
+    padding: 2rem 20rem;
   }
 }
 
